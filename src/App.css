@@ -1,0 +1,79 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.avatar_image {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: solid 5px;
+  border-top-color: #511366;
+  border-left-color: #511366;
+  border-bottom-color: #2f0047;
+  border-right-color: #2f0047;
+  border-radius: 50%;
+  box-shadow: 8px 10px 15px -5px rgba(255, 255, 255, 0.1);
+}
+.about_section {
+  margin-top: 2rem;
+  padding: 1rem;
+
+  border-radius: 15px;
+  box-shadow: 8px 10px 15px -5px rgba(255, 255, 255, 0.1);
+  background: radial-gradient(at bottom right, #2f0047, #511366);
+}
+
+.info_card {
+  display: flex;
+  justify-content: space-between;
+}
+.second_title {
+  color: rgba(255, 255, 255, 0.5);
+}
+hr {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.info_label,
+.skill_label {
+  font-weight: bold;
+  margin-top: 1.5em;
+}
+
+.progressbar {
+  width: auto;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 15px;
+  height: 30px;
+}
+
+.progressbar::before {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.87);
+  animation: progress 1s ease-out forwards;
+  width: 0;
+  height: inherit;
+  content: attr(title);
+  color: #2f0047;
+}
+
+.progressbar::after {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+@keyframes progress {
+  to {
+    width: var(--width);
+  }
+}
